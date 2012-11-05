@@ -1,0 +1,2 @@
+GkoVillaJasminGouverneurStbarths::Application.configure do
+end
