@@ -1,0 +1,57 @@
+/*-----------------------------------------
+ HEADER
+----------------------------------------- */
+.navbar {
+
+
+	@include hidden-dropdown();
+	ul.nav {
+		@include center-block();
+		left: auto;
+		float: none;
+	}
+	ul.nav > li {
+		float: none;
+	}
+	ul.nav > li > a {
+		text-transform: uppercase;
+		text-align: center;
+		font-size: $font-size-base;
+		letter-spacing: 2px;
+		text-shadow: none;
+		padding: 3px 15px;
+	}
+	hr {
+		display: none;
+	}
+	.btn-navbar {
+		@include button-background($gray-lighter, $gray-lLighter);
+		text-transform: uppercase;
+		padding: $line-height-computed 0;
+		font-size: $font-size-base + 4;
+		border: none;
+	}
+}
+#locales-menu ul.nav li > a {
+	font-size: $font-size-base - 2;
+}
+
+.navbar-brand {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	top: 10.35%;
+	letter-spacing: 4px;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 42px;
+	font-weight: 300;
+	font-size: 32px;
+	a {
+		padding: $line-height-computed 0;
+		display: block;
+		margin: $line-height-computed auto;
+	}
+	
+} 

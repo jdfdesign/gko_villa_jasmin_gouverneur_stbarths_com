@@ -1,7 +1,7 @@
-<% resource_cache(resource) do %> 
+<%# resource_cache(resource) do %> 
 <ul class="unstyled">
-	<%= content_tag_for(:li, resource, :class => "row-fluid") do %>
-	<article class="span12 article-inverse">
+	<%= content_tag_for(:li, resource, :class => "row") do %>
+	<article class="col-xs-12 article-inverse">
 		<%= render_slideshow_for(resource, :plugin => 'galleria') %>
 		<div class='article-content'>
 			<%= render_page_title(resource.title) %>
@@ -20,8 +20,8 @@
 	end
 %>
 <% sections.each do |page| %>
-	<%= content_tag_for(:li, page, :class => "row-fluid") do -%>
-		<article class="span12 page-content"> 
+	<%= content_tag_for(:li, page, :class => "row") do -%>
+		<article class="col-xs-12 page-content"> 
 		<%= render_slideshow_for(page, :plugin => 'galleria') %>
 		<div class='article-content'>
 			<b class='snap'></b>
@@ -33,4 +33,4 @@
 	<%- end -%>
 <% end if sections.try(:any?) %>
 </ul>
-<% end %>
+<%# end %>

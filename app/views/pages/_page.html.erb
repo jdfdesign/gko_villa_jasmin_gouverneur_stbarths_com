@@ -1,6 +1,6 @@
 <% resource_cache(resource) do %> 
-	<%= content_tag_for(:li, resource, :class => "row-fluid") do %>
-		<div class="span12 page-content"> 
+	<%= content_tag_for(:li, resource, :class => "row") do %>
+		<div class="col-xs-12 page-content"> 
 			<% if resource.images.any? %>
 			<div class='page-images'>
 				<%= render_slideshow_for(resource, :plugin => 'galleria') %>

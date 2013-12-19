@@ -1,9 +1,8 @@
-<!doctype html>
-<%= render 'html_tag' %>
+<!DOCTYPE html>
+<html class="no-js">
 <%= render 'head' %>
 <body id='<%= @body_id %>'>
-<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<div id="wrapper-wide-body">
+<div id="page-wrapper">
   <%= render 'header' %>
   <div id='main-container' class='container-fluid'>
 	<div id="main-row" class='row-fluid'>
@@ -15,6 +14,8 @@
   </div>
   <%= render 'copyright' %>
 </div>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' ></script>
+<script src='//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js'></script>
 <%= render 'javascripts' %>
 </body>
 </html>
