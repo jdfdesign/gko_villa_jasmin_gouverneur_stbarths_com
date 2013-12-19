@@ -84,99 +84,8 @@ hr {
 	width: 28px;
 	@include center-block();
 }
-/*-----------------------------------------
- FORM
------------------------------------------ */
-form {
-	@include center-block();
-	text-align: center;
-}
-label {
-	font-family: $font-family-serif;
-	font-style: italic;
-}
-/*-----------------------------------------
- HEADER
------------------------------------------ */
-.navbar {
-	.brand {
-		margin: 0;
-		padding: 0;
-		text-align: center;
-		width: 100%;
-		top: 10.35%;
-		letter-spacing: 4px;
-		text-align: center;
-		text-transform: uppercase;
-		line-height: 42px;
-		font-weight: 300;
-		font-size: 32px;
-		a {
-			padding: $baseLineHeight 0;
-			display: block;
-			margin: $baseLineHeight auto;
-		}
-		
-	} 
 
-	@include hidden-dropdown();
-	ul.nav {
-		@include center-block();
-		left: auto;
-		float: none;
-	}
-	ul.nav > li {
-		float: none;
-	}
-	ul.nav > li > a {
-		text-transform: uppercase;
-		text-align: center;
-		font-size: $baseFontSize;
-		letter-spacing: 2px;
-		text-shadow: none;
-		padding: 3px 15px;
-	}
-	hr {
-		display: none;
-	}
-	.btn-navbar {
-		@include button-background($grayLighter, $grayLighter);
-		text-transform: uppercase;
-		padding: $baseLineHeight 0;
-		font-size: $baseFontSize + 4;
-		border: none;
-		[class^="icon-"], [class*=" icon-"] {
-			background-image: url(/assets/twitter/bootstrap/glyphicons-halflings.png);
-			margin: 2px 0 0 2px;
-			@include opacity(40);
-		}	
-	}
-}
-#locales-menu ul.nav li > a {
-	font-size: $baseFontSize - 2;
-}
-	
-.footer-nav {
-	position: absolute;
-	top: $baseLineHeight / 4;
-	left: $baseLineHeight / 4;
-	text-align: center;
-}
-.contact-icons {
-	ul {
-		margin: 0px;
-		padding: 0px;
-		list-style: none;
-		li {
-			height: 14px;
-			padding: 0px 3px;
-			float: left;
-		}
-	}
-}
-/*-----------------------------------------
- FOOTER
------------------------------------------ */
+
 /*-----------------------------------------
  CONTENT
 ----------------------------------------- */
@@ -231,30 +140,7 @@ article {
 	padding: 60px 21px $baseLineHeight 21px;
 }
 
-/*-----------------------------------------
- FOOTER
------------------------------------------ */
-#copyright-container {
 
-	.nav > li > a {
-		font-size: $baseFontSize - 3;
-		text-shadow: none;
-	  // Vertically center the text given @navbarHeight
-	  $elementHeight: 20px;
-	  padding: (($copyrightHeight - $elementHeight) / 2 - 1) 10px (($copyrightHeight - $elementHeight) / 2 + 1);
-	  line-height: 19px;
-	  float: left;
-	}	
-}
-#site-by {
-	font-size: $baseFontSize - 3;
-	text-decoration: underline;
-	float: right;
-	// Vertically center the text given @navbarHeight
-	$elementHeight: 20px;
-	padding: (($copyrightHeight - $elementHeight) / 2 - 1) 10px (($copyrightHeight - $elementHeight) / 2 + 1);
-	line-height: 19px;
-}
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
