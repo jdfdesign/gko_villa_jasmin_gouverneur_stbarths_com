@@ -1,5 +1,5 @@
-//= require jquery_ujs
-
+//= require gko/gko.galleria
+//= require navigation
 
 var $window,$body;
 
@@ -7,10 +7,12 @@ var Site = {
 	init: function() {
 		$body = $("body"),
 		$window = $(window);
+    init_navigation();
 		Carousel.addTheme();
 		Carousel.init();
 		
 		$("body").fadeIn(3000).css("display", "block");
+    $(window).trigger('resize');
 	}
 }
 

@@ -1,9 +1,9 @@
-<% resource_cache(resource) do %> 
+<%# resource_cache(resource) do %> 
 	<%= content_tag_for(:li, resource, :class => "row") do %>
 		<div class="col-xs-12 page-content"> 
 			<% if resource.images.any? %>
 			<div class='page-images'>
-				<%= render_slideshow_for(resource, :plugin => 'galleria') %>
+				<%= render_slideshow_for(resource) %>
 				<h3 class='slideshow-title'><%= resource.title %></h3>
 			</div>
 			<% end %>
@@ -15,4 +15,4 @@
 			</div>
 		</div>
 	<% end %> 
-<% end %>
+<%# end %>

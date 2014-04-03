@@ -27,7 +27,7 @@ $brand-info:            #5bc0de;
 // Scaffolding
 // -------------------------
 
-$body-bg:               #fff;
+$body-bg:               #f8f8f8;//#fff;
 $text-color:            $gray-dark;
 
 // Links
@@ -260,14 +260,14 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
 // Basics of a navbar
 $navbar-height:                    50px;
-$navbar-margin-bottom:             $line-height-computed;
+$navbar-margin-bottom:             0;//$line-height-computed;
 $navbar-border-radius:             $border-radius-base;
 $navbar-padding-horizontal:        floor($grid-gutter-width / 2);
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2);
 
 $navbar-default-color:             #777;
-$navbar-default-bg:                #f8f8f8;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%);
+$navbar-default-bg:                $body-bg;
+$navbar-default-border:            $body-bg;//darken($navbar-default-bg, 6.5%);
 
 // Navbar links
 $navbar-default-link-color:                #777;
@@ -629,13 +629,13 @@ $component-offset-horizontal: 180px;
 // --------------------------------------------------
 
 // Small screen / tablet
-$container-tablet:             ((720px + $grid-gutter-width));
+$container-tablet:             ((720px + $grid-gutter-width)) - $th-sidebar-width;//((720px + $grid-gutter-width));
 $container-sm:                 $container-tablet;
 
 // Medium screen / desktop
-$container-desktop:            ((940px + $grid-gutter-width));
+$container-desktop:            ((940px + $grid-gutter-width)) - $th-sidebar-width;//((940px + $grid-gutter-width));
 $container-md:                 $container-desktop;
 
 // Large screen / wide desktop
-$container-large-desktop:      ((1140px + $grid-gutter-width));
+$container-large-desktop:      ((1140px + $grid-gutter-width)) - $th-sidebar-width;//((1140px + $grid-gutter-width));
 $container-lg:                 $container-large-desktop;

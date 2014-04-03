@@ -1,16 +1,13 @@
 /* THEME VARIABLES
 -------------------------------------------------- */
-$theme-color: #d61941; 
-$max-image-width: 950px;
-$th-brand-logo-height: 52px;
-$sidebar-width: 220px;
+$theme-color: #222222; 
+$th-sidebar-width: 240px;
 
 /* IMPORTS
 -------------------------------------------------- */ 
 @import "theme/variables"; 
-@import "twitter/bootstrap";
-@import "font-awesome-4.0.3/font-awesome"; 
-//@import "theme/navbar";
+@import "bootstrap.3.0.2/bootstrap"; 
+@import "theme/navbar";
 //@import "theme/footer";
 //@import "theme/form"; 
 @import "theme/home"; 
@@ -46,7 +43,8 @@ $sidebar-width: 220px;
 -------------------------------------------------- */
 // We do not want focus
 a:focus,
-.btn:focus {
+.btn:focus,
+button:focus {
   outline: 0;
 }
 ::selection {
@@ -55,4 +53,109 @@ a:focus,
 }
 a {
   @include transition(all 0.3s ease-in-out);
+}
+ul.unstyled {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+h1 {margin-top: 0;}
+/*-----------------------------------------
+ STRUCTURAL LAYOUT 
+----------------------------------------- */
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+body {
+  display: none;
+} 
+#page-wrapper {
+ @include transition(padding .3s ease);
+}
+hr {
+  width: 28px;
+  @include center-block();
+}
+body.sidebar-open {
+  #page-wrapper {
+    margin-left: $th-sidebar-width;
+  }
+  .sidebar {
+    position: absolute;
+    left: 0;
+  }
+}
+
+#page-wrapper {
+  height: 100%;
+  > .container {
+    background-color: white;
+    float: left;
+    margin: 0;
+    height: 100%;
+  }
+}
+
+/*-----------------------------------------
+ CONTENT
+----------------------------------------- */
+.html-text {
+  text-align: center;
+  padding: $line-height-computed 21px;
+}
+article {
+	.article-content {
+		position: relative;
+	}
+	.snap {
+		z-index: 10;
+		position: absolute;
+		top: -9px;
+		left: 50%;
+		margin-left: -9px;
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #fff;
+	}
+}
+
+.article-inverse {
+	background: $gray-darker; 
+	.html-text {
+		color: $gray;
+		font-size: 20px;
+		line-height: 26px;
+    letter-spacing: 1px;
+		padding: 0 60px;
+		text-align: center;
+		font-style: italic;
+		font-family: $font-family-serif;
+	}
+	hr {
+		color: #000;
+	}
+  @media (min-width: $grid-float-breakpoint) {
+    .html-text {
+  		font-size: 40px;
+  		line-height: 50px;
+      letter-spacing: 3px;
+      padding: 100px;
+    }
+  }
+}
+.page-title {
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: capitalize;
+  font-style: italic;
+  line-height: 90px;
+  font-weight: 300;
+  font-size: 64px;
+  font-family: $font-family-serif;
+  padding: 60px 21px $line-height-computed 21px;
 }
